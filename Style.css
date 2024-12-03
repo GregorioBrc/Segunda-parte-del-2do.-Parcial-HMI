@@ -1,0 +1,129 @@
+body {
+  margin: 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+header {
+  background-color: black;
+}
+
+header h1 {
+  margin: 0px 0px 0px 30px;
+}
+
+a {
+  color: white;
+}
+
+.Titu {
+  display: inline-block;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.Main_Text {
+  margin: 0px 10%;
+  display: flex;
+}
+
+.simulacion aside {
+  margin: auto;
+  width: fit-content;
+}
+
+button {
+  font-size: 30px;
+  border: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+nav {
+  display: inline-block;
+  margin: 0% 0% 0% 30%;
+}
+
+nav div {
+  display: flex;
+}
+
+nav aside {
+  margin: 10px;
+}
+
+footer {
+  color: white;
+  background: black;
+}
+
+.Diagramas {
+  display: flex;
+  justify-content: space-around;
+}
+
+#Aside_Simu {
+  display: flex;
+  align-items: flex-end;
+}
+
+#Aside_Ini {
+  margin-top: 30px;
+}
+
+#Img_bom2 {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+
+#Tanque3,
+#Tanque2,
+#Tanque1 {
+  width: 200px;
+  height: 300px;
+  border: 3px solid black;
+  border-top: 0px;
+  display: flex;
+  align-items: flex-end;
+}
+
+#Liquid_T3,
+#Liquid_T1,
+#Liquid_T2 {
+  width: 99%;
+  height: 0px;
+  margin: 0px auto;
+  background-color: purple;
+  transition: height 0.5s ease-in-out;
+  transition: background 15s ease-in-out;
+  -webkit-transition: background 15s ease-in-out;
+  -moz-transition: background 15s ease-in-out;
+  -ms-transition: background 15s ease-in-out;
+  -o-transition: background 15s ease-in-out;
+}
+
+#Liquid_T1 {
+  background: linear-gradient(90deg, blue, red);
+}
+
+
+#Medidas_div {
+  width: 200px;
+  margin: auto 10px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#Medidas_div p {
+  margin-top: 0px;
+}

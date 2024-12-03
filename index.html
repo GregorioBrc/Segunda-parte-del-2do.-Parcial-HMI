@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mezcla 3 Tanques</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <header>
+      <aside class="Titu">
+        <h1><a href="">HMI</a></h1>
+      </aside>
+      <nav>
+        <div>
+          <aside>
+            <h2><a href="">GRAFCET</a></h2>
+          </aside>
+          <aside>
+            <h2><a href="simu.html">SIMULACIÓN</a></h2>
+          </aside>
+          <aside>
+            <h2><a href="">INFORME</a></h2>
+          </aside>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article class="Main_Text">
+        <aside>
+          <h1>Automatización de la mezcla de 4 sustancias en 3 tanques</h1>
+          <p>
+            Se requiere automatizar la mezcla de una Sustancia A, B, C y D en
+            respectivo agitador, 4 valvulas, dos bombas y medidores de nivel en
+            cada tanque.
+          </p>
+          <p>
+            El proceso debe iniciar con un boton, y no se puede volver a usar
+            hasta que el proceso haya terminado y ningun tanque tenga alguna
+            cantidad de liquido.
+          </p>
+          <p>
+            El proceso inicia con el vertido de la sustancia A y B en un tanque
+            central, las cantidades de cada sustancia se van a medir con un
+            cronometro ya que las válvulas tienen un flujo constante. Luego de
+            haber pasado el tiempo de las dos sustancias se pasara a la fase de
+            romover y calentar, este proceso durara hasta que la mezcla este a
+            una temperatura de 175 °C
+          </p>
+          <p>
+            Posteriormente se activaran dos bombas que llevaran el liquido al
+            tanque de la izquierda y el de la derecha. Por una parte el tanque
+            de la izquierda solo utilizara el liquido que libre acumular durante
+            5 segundos; por otra parte el tanque de la derecha absorberá hasta
+            que el medidor del tanque central se desactive
+          </p>
+          <p>
+            El tanque de la izquierda abrirá la válvula para ingresar la
+            sustancia D a la vez que va removiendo hasta alcanzar el medido de
+            nivel alto, luego de eso solo removera durante 20 segundos para
+            posteriormente vaciar el tanque hacia otro sistema que necesita esta
+            mezcla
+          </p>
+          <p>
+            Por otra parte el tanque de la derecha cuando haya completado de
+            vaciar el tanque central, abrirá la válvula para ingresar la
+            sustancia C durante 5 segundos, para posteriormente empezar a
+            mezclar durante 10 segundos y finalmente vaciar dicho tanque hacia
+            otro sistema que necesita esta mezcla
+          </p>
+          <p>
+            Para finalmente volver al paso 1 en donde puede iniciar el proceso
+          </p>
+        </aside>
+        <aside>
+          <img src="/img/Img.avif" width="500" alt="" />
+        </aside>
+      </article>
+      <article class="Diagramas">
+        <aside>
+          <h2>Diseño Del GRAFCET</h2>
+          <img src="/img/Grafcet.jpg" width="500" srcset="" />
+        </aside>
+        <aside>
+          <h2>Diseño Del Diagrama</h2>
+          <img src="/img/Diagrama.jpg" alt="Error" width="700" />
+        </aside>
+      </article>
+      <article class="simulacion">
+        <aside class="simu" id="Aside_Simu">
+          <div id="Tanque3">
+            <div id="Liquid_T3"></div>
+          </div>
+          <div id="Bomba2">
+            <img id="Img_bom1" src="/img/Bomb.png" width="50" alt="" />
+          </div>
+          <div id="Tanque1">
+            <div id="Liquid_T1"></div>
+          </div>
+          <div id="Bomba1">
+            <img id="Img_bom2" src="/img/Bomb.png" width="50" alt="" />
+          </div>
+          <div id="Tanque2">
+            <div id="Liquid_T2"></div>
+          </div>
+          <div id="Medidas_div">
+            <p>Ultimo Estado: <span id="Estado">Esperando inicio</span></p>
+            <p>Tanque Izquierdo <span id="Porcen_T3">0</span>%</p>
+            <p>Tanque Central <span id="Porcen_T1">0</span>%</p>
+            <p>Tanque Derecho <span id="Porcen_T2">0</span>%</p>
+            <p>Válvula A: <span id="V_A">Cerrada</span></p>
+            <p>Válvula B: <span id="V_B">Cerrada</span></p>
+            <p>Válvula C: <span id="V_C">Cerrada</span></p>
+            <p>Válvula D: <span id="V_D">Cerrada</span></p>
+            <p>Bomba 1: <span id="Est_B1">Apagada</span></p>
+            <p>Bomba 2: <span id="Est_B2">Apagada</span></p>
+            <p>Temperatura: <span id="Temp">20</span> °C</p>
+          </div>
+        </aside>
+        <aside id="Aside_Ini">
+          <button id="Btn_Ini">INICIAR</button>
+        </aside>
+      </article>
+    </main>
+
+    <footer>
+      <h2>Autor</h2>
+      <p>Jose gregorio Briceño</p>
+      <p>V-29.544.700</p>
+      <h2>© 2024 Automatización de procesos industriales.</h2>
+    </footer>
+  </body>
+  <script src="/index.js"></script>
+</html>
