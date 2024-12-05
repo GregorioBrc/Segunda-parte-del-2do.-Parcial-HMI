@@ -10,11 +10,10 @@ let Flag_T2 = true;
 
 let FlagP_7 = false;
 
-Bt = document.getElementById("Btn_Ini");
+let Bt = document.getElementById("Btn_Ini");
 let Lq1 = document.getElementById("Liquid_T1");
 let Lq2 = document.getElementById("Liquid_T2");
 let Lq3 = document.getElementById("Liquid_T3");
-
 let Bom1 = document.getElementById("Img_bom1");
 let Bom2 = document.getElementById("Img_bom2");
 
@@ -224,7 +223,7 @@ function llenado3_2() {
     document.getElementById("Estado").innerText = "Removiendo Tanque Izquierdo";
 
     setTimeout(() => {
-      document.getElementById("Estado").innerText = "Vaciando Tanque IZquierdo";
+      document.getElementById("Estado").innerText = "Vaciando Tanque Izquierdo";
       Vaciar3();
     }, 20000);
   }

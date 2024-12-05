@@ -15,6 +15,10 @@ a {
   color: white;
 }
 
+main{
+  margin: 10px;
+}
+
 .Titu {
   display: inline-block;
   justify-content: space-around;
@@ -58,6 +62,7 @@ nav aside {
 footer {
   color: white;
   background: black;
+  padding: 10px;
 }
 
 .Diagramas {
@@ -128,7 +133,6 @@ footer {
   margin-top: 0px;
 }
 
-
 .F_rojo {
   filter: 
     invert(75%) 
@@ -143,4 +147,18 @@ footer {
     sepia(100%) 
     hue-rotate(50deg) 
     saturate(5000%);
+}
+
+.FooterSub{
+  text-align: center;
+  margin: 0px;
+}
+
+footer h2{
+  margin: 0px;
+}
+
+footer section{
+  width: fit-content;
+  margin: 50px;
 }
