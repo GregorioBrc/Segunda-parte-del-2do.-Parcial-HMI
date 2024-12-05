@@ -15,8 +15,12 @@ a {
   color: white;
 }
 
-main{
+main {
   margin: 10px;
+}
+
+.Main_Text {
+  font-size: 18px;
 }
 
 .Titu {
@@ -117,7 +121,6 @@ footer {
   background: linear-gradient(90deg, blue, red);
 }
 
-
 #Medidas_div {
   width: 200px;
   margin: auto 10px;
@@ -134,31 +137,23 @@ footer {
 }
 
 .F_rojo {
-  filter: 
-    invert(75%) 
-    sepia(100%) 
-    hue-rotate(320deg) 
-    saturate(5000%);
+  filter: invert(75%) sepia(100%) hue-rotate(320deg) saturate(5000%);
 }
 
 .F_verde {
-  filter: 
-    invert(100%) 
-    sepia(100%) 
-    hue-rotate(50deg) 
-    saturate(5000%);
+  filter: invert(100%) sepia(100%) hue-rotate(50deg) saturate(5000%);
 }
 
-.FooterSub{
+.FooterSub {
   text-align: center;
   margin: 0px;
 }
 
-footer h2{
+footer h2 {
   margin: 0px;
 }
 
-footer section{
+footer section {
   width: fit-content;
   margin: 50px;
 }
