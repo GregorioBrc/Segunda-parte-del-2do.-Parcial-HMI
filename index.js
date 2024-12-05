@@ -15,16 +15,21 @@ let Lq1 = document.getElementById("Liquid_T1");
 let Lq2 = document.getElementById("Liquid_T2");
 let Lq3 = document.getElementById("Liquid_T3");
 
+let Bom1 = document.getElementById("Img_bom1");
+let Bom2 = document.getElementById("Img_bom2");
+
 Bt.addEventListener("click", Iniciar);
 
 function Iniciar() {
-  document.getElementById("Estado").innerText = "Llenando Primer Tanque";
+  document.getElementById("Estado").innerText = "Llenando Tanque Central";
   document.getElementById("V_A").innerText = "Abierta";
   document.getElementById("V_B").innerText = "Abierta";
   Bt.disabled = true;
   Flag_T3 = false;
   Flag_T2 = false;
   setTimeout(REini, 10000);
+  Bom1.classList.add("F_rojo");
+  Bom2.classList.add("F_rojo");
   Ini_LLenado1();
 }
 
@@ -38,6 +43,8 @@ function REini() {
     auxDegra = 1;
     Lq2.style.background = "purple";
     Lq3.style.background = "purple";
+    Bom1.classList.remove("F_rojo");
+    Bom2.classList.remove("F_rojo");
   } else {
     setTimeout(REini, 100);
   }
@@ -71,9 +78,13 @@ function Ini_LLenado1() {
       Lq1.style.height = "290px";
       Cant_T1 = 290;
       setTimeout(() => {
-        document.getElementById("Estado").innerText = "Vaciando Primer Tanque";
+        document.getElementById("Estado").innerText = "Vaciando Tanque Central";
         document.getElementById("Est_B1").innerText = "Encendida";
         document.getElementById("Est_B2").innerText = "Encendida";
+        Bom1.classList.remove("F_rojo");
+        Bom2.classList.remove("F_rojo");
+        Bom1.classList.add("F_verde");
+        Bom2.classList.add("F_verde");
         Vaciado1();
       }, 10000);
     }, 5000);
@@ -109,8 +120,10 @@ function Vaciado1() {
     } else {
       llenado2(2);
       if (!FlagP_7) {
+        Bom1.classList.remove("F_verde");
+        Bom1.classList.add("F_rojo");
         document.getElementById("Est_B1").innerText = "Apagada";
-        document.getElementById("Estado").innerText = "Llenando Tanque 3";
+        document.getElementById("Estado").innerText = "Llenando Tanque Derecho";
         document.getElementById("V_D").innerText = "Abierta";
         FlagP_7 = !FlagP_7;
         llenado3_2();
@@ -119,11 +132,12 @@ function Vaciado1() {
     setTimeout(Vaciado1, 100);
   } else {
     Enfriar();
+    Bom2.classList.remove("F_verde");
+    Bom2.classList.add("F_rojo");
     document.getElementById("Est_B2").innerText = "Apagada";
     document.getElementById("V_C").innerText = "Abierta";
-    document.getElementById("Estado").innerText = "Llenando Tanque 2";
+    document.getElementById("Estado").innerText = "Llenando Tanque Izquierdo";
     llenado2_2();
-    document.getElementById("Estado").innerText = "---";
   }
 }
 
@@ -159,10 +173,10 @@ function llenado2_2(C) {
 }
 
 function Camb_C2() {
-  document.getElementById("Estado").innerText = "Removiendo Tanque 2";
+  document.getElementById("Estado").innerText = "Removiendo Tanque Derecho";
   Lq2.style.background = "deeppink";
   setTimeout(() => {
-    document.getElementById("Estado").innerText = "Vaciando Tanque 2";
+    document.getElementById("Estado").innerText = "Vaciando Tanque Derecho";
     Vaciar2();
   }, 10000);
 }
@@ -207,10 +221,10 @@ function llenado3_2() {
     setTimeout(llenado3_2, 100);
   } else {
     document.getElementById("V_D").innerText = "Cerrada";
-    document.getElementById("Estado").innerText = "Removiendo Tanque 3";
+    document.getElementById("Estado").innerText = "Removiendo Tanque Izquierdo";
 
     setTimeout(() => {
-      document.getElementById("Estado").innerText = "Vaciando Tanque 3";
+      document.getElementById("Estado").innerText = "Vaciando Tanque IZquierdo";
       Vaciar3();
     }, 20000);
   }

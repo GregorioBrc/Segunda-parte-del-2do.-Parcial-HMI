@@ -127,3 +127,20 @@ footer {
 #Medidas_div p {
   margin-top: 0px;
 }
+
+
+.F_rojo {
+  filter: 
+    invert(75%) 
+    sepia(100%) 
+    hue-rotate(320deg) 
+    saturate(5000%);
+}
+
+.F_verde {
+  filter: 
+    invert(100%) 
+    sepia(100%) 
+    hue-rotate(50deg) 
+    saturate(5000%);
+}
