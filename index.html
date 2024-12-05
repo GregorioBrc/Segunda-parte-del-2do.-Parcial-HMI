@@ -14,10 +14,10 @@
       <nav>
         <div>
           <aside>
-            <h2><a href="">GRAFCET</a></h2>
+            <h2><a href="#Art_Diagra">GRAFCET</a></h2>
           </aside>
           <aside>
-            <h2><a href="simu.html">SIMULACIÓN</a></h2>
+            <h2><a href="#Aside_Simu">SIMULACIÓN</a></h2>
           </aside>
           <aside>
             <h2><a href="/Reporte.html">Reporte Twidosuite</a></h2>
@@ -32,38 +32,38 @@
           <h1>Automatización de la mezcla de 4 sustancias en 3 tanques</h1>
           <p>
             Se requiere automatizar la mezcla de una Sustancia A, B, C y D en
-            respectivo agitador, 4 valvulas, dos bombas y medidores de nivel en
+            respectivo agitador, 4 válvulas, dos bombas y medidores de nivel en
             cada tanque.
           </p>
           <p>
-            El proceso debe iniciar con un boton, y no se puede volver a usar
-            hasta que el proceso haya terminado y ningun tanque tenga alguna
-            cantidad de liquido.
+            El proceso debe iniciar con un botón, y no se puede volver a usar
+            hasta que el proceso haya terminado y ningún tanque tenga alguna
+            cantidad de líquido.
           </p>
           <p>
             El proceso inicia con el vertido de la sustancia A y B en un tanque
             central, las cantidades de cada sustancia se van a medir con un
             cronometro ya que las válvulas tienen un flujo constante. Luego de
-            haber pasado el tiempo de las dos sustancias se pasara a la fase de
-            romover y calentar, este proceso durara hasta que la mezcla este a
+            haber pasado el tiempo de las dos sustancias se pasará a la fase de
+            agitación y calentar, este proceso durara hasta que la mezcla este a
             una temperatura de 175 °C
           </p>
           <p>
-            Posteriormente se activaran dos bombas que llevaran el liquido al
-            tanque de la izquierda y el de la derecha. Por una parte el tanque
-            de la izquierda solo utilizara el liquido que libre acumular durante
-            5 segundos; por otra parte el tanque de la derecha absorberá hasta
+            Posteriormente se activarán dos bombas que llevarán el líquido al
+            tanque de la izquierda y el de la derecha. Por una parte, el tanque
+            de la izquierda solo utilizara el líquido que libre acumular durante
+            5 segundos; por otra parte, el tanque de la derecha absorberá hasta
             que el medidor del tanque central se desactive
           </p>
           <p>
             El tanque de la izquierda abrirá la válvula para ingresar la
             sustancia D a la vez que va removiendo hasta alcanzar el medido de
-            nivel alto, luego de eso solo removera durante 20 segundos para
+            nivel alto, luego de eso solo agitar durante 20 segundos para
             posteriormente vaciar el tanque hacia otro sistema que necesita esta
             mezcla
           </p>
           <p>
-            Por otra parte el tanque de la derecha cuando haya completado de
+            Por otra parte, el tanque de la derecha cuando haya completado de
             vaciar el tanque central, abrirá la válvula para ingresar la
             sustancia C durante 5 segundos, para posteriormente empezar a
             mezclar durante 10 segundos y finalmente vaciar dicho tanque hacia
@@ -77,7 +77,7 @@
           <img src="/img/Img.avif" width="500" alt="" />
         </aside>
       </article>
-      <article class="Diagramas">
+      <article class="Diagramas" id="Art_Diagra">
         <aside>
           <h2>Diseño Del GRAFCET</h2>
           <img src="/img/Grafcet.jpg" width="500" srcset="" />
@@ -88,6 +88,7 @@
         </aside>
       </article>
       <article class="simulacion">
+        <h2>Simulación</h2>
         <aside class="simu" id="Aside_Simu">
           <div id="Tanque3">
             <div id="Liquid_T3"></div>

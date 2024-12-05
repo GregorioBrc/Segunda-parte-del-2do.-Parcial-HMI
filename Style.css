@@ -149,6 +149,11 @@ footer {
   margin: 0px;
 }
 
+.simulacion h2{
+  width: fit-content;
+  margin: auto;
+}
+
 footer h2 {
   margin: 0px;
 }
